@@ -31,7 +31,7 @@ listen(notify)
 
 ## Demo
 
-![demo of auth-code-copy]()https://user-images.githubusercontent.com/659829/32456177-84690c9e-c2d9-11e7-8a46-97c4a6d9ed75.gif
+![demo of auth-code-copy](https://user-images.githubusercontent.com/659829/32456177-84690c9e-c2d9-11e7-8a46-97c4a6d9ed75.gif)
 
 ## Tests
 
