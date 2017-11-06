@@ -25,12 +25,13 @@ $ auth-code-copy-listen
 
 ```js
 const { listen } = require('auth-code-copy')
-listen()
+const notify = code => { growl(`Copied ${code}!`) }
+listen(notify)
 ```
 
 ## Demo
 
-![demo of alfred messages](https://user-images.githubusercontent.com/659829/27117260-a7bcc706-508a-11e7-80f9-d3db4360d19c.gif)
+![demo of auth-code-copy]()https://user-images.githubusercontent.com/659829/32456177-84690c9e-c2d9-11e7-8a46-97c4a6d9ed75.gif
 
 ## Tests
 
