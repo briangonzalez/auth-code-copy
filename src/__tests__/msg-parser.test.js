@@ -1,4 +1,4 @@
-import { splitAndFindCode, getCode } from '../get-code'
+import { splitAndFindCode, getCode, getSenderName } from '../msg-parser'
 
 test('splitAndFindCode', () => {
   expect(splitAndFindCode(
@@ -20,4 +20,22 @@ test('getCode', () => {
       /is your code/
     ]
   )).toBe('123456')
+})
+
+test('getSenderName', () => {
+  expect(getSenderName(
+    'Your Acme code is 123456',
+    [
+      'acme',
+      'amazon'
+    ]
+  )).toBe('acme')
+
+  expect(getSenderName(
+    'Your NoName Inc. code is 123456',
+    [
+      'acme',
+      'amazon'
+    ]
+  )).toBeUndefined()
 })

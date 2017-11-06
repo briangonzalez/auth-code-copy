@@ -1,13 +1,15 @@
-import { patterns } from './patterns'
-import { getCode } from './get-code'
+import { patterns, potentialSenders } from './search-data'
+import { getCode, getSenderName } from './msg-parser'
 
 import imessage from 'osa-imessage'
 import clipboardy from 'clipboardy'
+import ora from 'ora'
 
 const noop = () => {}
 
 export const listen = (cb = noop) => {
-  console.log('Listening for auth codes...')
+  const listeningText = 'Listening for codes...'
+  const spinner = ora(listeningText).start()
 
   imessage.listen().on('message', (msg) => {
     if (msg.fromMe) return
@@ -15,9 +17,17 @@ export const listen = (cb = noop) => {
     const code = getCode(text, patterns)
 
     if (code) {
-      console.log(`Copied "${code}" to your clipboard`)
+      const sender = getSenderName(text, potentialSenders)
+      spinner.succeed(`Copied '${code}'${sender ? ` from ${sender} ` : ''}to your clipboard`)
+      spinner.start()
+      spinner.text = listeningText
+
       clipboardy.writeSync(code.toString())
-      cb(code)
+      cb(null, {
+        code,
+        text: msg.text,
+        sender
+      })
     }
   })
 }
