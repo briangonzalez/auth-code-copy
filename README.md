@@ -1,6 +1,6 @@
 # auth-code-copy
 
-[![Build Status](https://travis-ci.org/briangonzalez/auth-code-copy.svg?branch=master&style=flat-square)](https://travis-ci.org/briangonzalez/auth-code-copy) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
+[![Build Status](https://img.shields.io/travis/briangonzalez/auth-code-copy/master.svg?style=flat-square)](https://travis-ci.org/briangonzalez/auth-code-copy)  [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](http://standardjs.com)
 
 
 > Copy auth codes sent via iMessage to your clipboard.
@@ -31,7 +31,7 @@ listen(notify)
 
 ## Demo
 
-![demo of auth-code-copy](https://user-images.githubusercontent.com/659829/32456177-84690c9e-c2d9-11e7-8a46-97c4a6d9ed75.gif)
+![demo of auth-code-copy](https://user-images.githubusercontent.com/659829/32469536-0f92ee60-c308-11e7-9ff5-4efd8ead1af7.gif)
 
 ## Tests
 
