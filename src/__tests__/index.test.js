@@ -21,7 +21,7 @@ test('listen should call the callback passing the code', () => {
   const cb = jest.fn()
   listen(cb)
   messageEmitter.emit('message', { text: 'Your code is 123456' })
-  expect(cb).toHaveBeenCalledWith('123456')
+  expect(cb).toHaveBeenCalledWith(null, { code: '123456', text: 'Your code is 123456' })
 })
 
 test('code should be copied', () => {

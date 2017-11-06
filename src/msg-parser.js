@@ -18,3 +18,8 @@ export const getCode = (text, patterns) => {
     .find(code => code)
   return code
 }
+
+export const getSenderName = (text, potentialSenders) => {
+  text = text.toLowerCase()
+  return potentialSenders.find(s => text.includes(s))
+}

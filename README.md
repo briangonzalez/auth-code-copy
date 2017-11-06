@@ -25,7 +25,7 @@ $ auth-code-copy-listen
 
 ```js
 const { listen } = require('auth-code-copy')
-const notify = code => { growl(`Copied ${code}!`) }
+const notify = (err, msg) => { growl(`Copied ${msg.code}!`) }
 listen(notify)
 ```
 
