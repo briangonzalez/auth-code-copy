@@ -18,7 +18,7 @@ $ npm install --global auth-code-copy
 ```sh
 $ auth-code-copy-listen
 
-# => Listening for auth codes...
+# => Listening for codes...
 ```
 
 ### Programmatically
