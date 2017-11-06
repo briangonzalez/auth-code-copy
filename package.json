@@ -1,0 +1,38 @@
+{
+  "name": "auth-code-copy",
+  "version": "1.0.0",
+  "description": "Copy auth codes sent via iMessage to your clipboard.",
+  "repository": "briangonzalez/auth-code-copy",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node src/entry.js",
+    "build": "babel src --out-dir dist",
+    "test": "jest",
+    "test:watch": "jest --watch src",
+    "lint": "eslint ."
+  },
+  "bin": {
+    "auth-code-copy-listen": "bin/index.js"
+  },
+  "author": "Brian M. Gonzalez",
+  "license": "MIT",
+  "dependencies": {
+    "clipboardy": "^1.1.4",
+    "eslint": "^4.10.0",
+    "osa-imessage": "briangonzalez/osa-imessage#2.3.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.4",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "jest": "^21.2.1"
+  }
+}

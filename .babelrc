@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "stage-2",
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        },
+        "modules": "commonjs"
+      }
+    ]
+  ]
+}
