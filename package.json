@@ -6,10 +6,11 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "node src/entry.js",
-    "build": "babel src --out-dir dist",
     "test": "jest",
     "test:watch": "jest --watch src",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "babel src --out-dir dist",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "auth-code-copy-listen": "bin/index.js"
