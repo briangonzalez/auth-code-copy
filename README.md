@@ -8,7 +8,8 @@
 ## Installation
 
 ```
-$ npm install --global auth-code-copy
+$ npm install --global auth-code-copy   # globally
+$ npm install --save auth-code-copy     # or locally
 ```
 
 ## Usage
